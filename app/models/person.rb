@@ -27,6 +27,6 @@ class Person < ActiveRecord::Base
   end
 
   def self.with_local_coworkers
-    joins(location: :people).where("people_locations.id <> people.id").distinct
+    joins(location: :people).where("people_locations.id != people.id").distinct
   end
 end
