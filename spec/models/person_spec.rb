@@ -114,6 +114,8 @@ describe Person do
         end
       end
 
+      binding.pry
+
       result = Person.with_employees.with_local_coworkers.order_by_location_name
 
       expect(result.map(&:name)).to eq(%w(
